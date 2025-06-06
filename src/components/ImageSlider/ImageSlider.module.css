@@ -1,0 +1,135 @@
+.gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  transition: transform 0.2s;
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbnail:hover {
+  transform: scale(1.03);
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Модальное окно */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mainImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  flex-grow: 1;
+  height: 720px;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 80vh;
+}
+
+.mainImage {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.navButton {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+  z-index: 10;
+}
+
+.previewContainer {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.previewThumbnail {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.previewThumbnail:hover, .previewThumbnail.active {
+  opacity: 1;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.counter {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}

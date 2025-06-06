@@ -1,0 +1,23 @@
+.filters {
+   margin-top: 40px;
+   display: flex;
+   column-gap: 20px;
+}
+
+.select {
+   width: 148px;
+   height: 39px;
+   border-radius: 60px;
+   border-width: 1px;
+   outline: none;
+   padding: 10px 14px;
+   font-weight: 400;
+   font-size: 16px;
+   color: #7A7A7A;
+   appearance: none;
+   background-image: url('../../../public/arrow.svg');
+   background-repeat: no-repeat;
+   background-position: right 10px center;
+   padding-right: 35px;
+   cursor: pointer;
+}

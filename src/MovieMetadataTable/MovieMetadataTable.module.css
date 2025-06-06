@@ -1,0 +1,12 @@
+.table {
+   color: #7A7A7A;
+}
+
+.table tr {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.table td:first-child {
+   width: 300px;
+}

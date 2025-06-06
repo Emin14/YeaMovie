@@ -1,0 +1,115 @@
+.wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.movieCard {
+   display: flex;
+   gap: 35px;
+}
+
+.leftBlock {
+   max-width: 482px;
+   flex-shrink: 0;
+}
+
+.banner {
+   border-radius: 10px;
+}
+
+.rightBlock {
+  flex: 1 1 auto;
+   flex-grow: 1;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title {
+   font-weight: 700;
+   font-size: 64px;
+   line-height: 100%;
+   line-height: 1;
+   width: min-content;
+}
+
+.ratings {
+   font-weight: 500;
+   font-size: 18px;
+   color: #FFD233;
+}
+
+.ratingCount {
+   font-weight: 700;
+   font-size: 20px;
+}
+
+.description {
+   margin-top: 30px;
+}
+
+.tableTitle {
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 100%;
+   letter-spacing: 0;
+   margin-top: 50px;
+   margin-bottom: 20px;
+}
+
+/* .table {
+   color: #7A7A7A;
+}
+
+.table tr {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.table td:first-child {
+   width: 300px;
+} */
+
+.leftColoumn {
+   width: 160px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+}
+
+.rightColoumn  {
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+}
+
+.watchTitle {
+   font-weight: 700;
+   font-size: 18px;
+   margin-bottom: 30px;
+   margin-top: 30px;
+}
+
+.watchabilityLogos {
+   display: flex;
+   gap: 20px;
+}
+
+.watchabilityLogo {
+   height: 64px;
+   /* width: 90px; */
+   overflow: hidden;
+}
+
+.movieFrames {
+   margin-top: 20px;
+}
+
+.breadcrumbs {
+   margin-bottom: 40px;
+   text-align: start;
+}
+

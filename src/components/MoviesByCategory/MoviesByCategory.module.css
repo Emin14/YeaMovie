@@ -1,0 +1,25 @@
+.moviesByCategory {
+   margin-top: 100px;
+   width: 100%;
+   min-height: 558px;
+}
+
+.btn {
+   font-weight: 400;
+   font-size: 18px;
+   background-color: #080423;
+   color: #FFFFFF;
+   border-radius: 60px;
+   padding: 10px 30px;
+   font-weight: 500;
+}
+
+.next {
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   gap: 16px;
+   margin-top: 20px;
+   font-weight: 400;
+   font-size: 16px;  
+}
