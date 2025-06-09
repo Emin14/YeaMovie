@@ -1,12 +1,11 @@
 .similarMovies {
-   margin-top: 78px;
-   position: relative;
+  margin-top: 78px;
+  position: relative;
 }
 
 .title {
-   text-align: center;
-   font-weight: 500;
-   font-size: 20px;
-   margin-bottom: 40px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
-

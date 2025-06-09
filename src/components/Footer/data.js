@@ -1,3 +1,5 @@
-export const navLink = ['Главная', 'Популярные фильмы', 'Популярные сериалы']
-
-// export const navLink = [{name: 'Главная', path: '/'}, {name: 'Популярные фильмы', path: '/'}, {name: 'Популярные сериалы', path: '/'}]
+export const navLink = [
+  { name: "Главная", path: "/" },
+  { name: "Популярные фильмы", path: "/popularMovies" },
+  { name: "Популярные сериалы", path: "/popularTvSeries" },
+];

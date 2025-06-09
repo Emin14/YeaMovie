@@ -1,29 +1,28 @@
 .footer {
-   height: 198px;
-   background-color: #080423;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: auto;
+  height: 198px;
+  background-color: #080423;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
-   color: #FF3D81;
-   font-family: Bayon;
-   font-weight: 400;
-   font-size: 40px;
+  color: #ff3d81;
+  font-family: Bayon;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .navLink {
-   color: #FFF9F9;
-   font-weight: 400;
-   font-size: 16px;
-   display: flex;
-   column-gap: 40px;
-
+  color: #fff9f9;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  column-gap: 40px;
 }
 
 .wrapper {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }

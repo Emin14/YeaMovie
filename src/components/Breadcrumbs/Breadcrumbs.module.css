@@ -1,17 +1,14 @@
 .breadcrumbs {
-   display: flex;
-   gap: 80px;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 100%;
-   color: #7A7A7A
+  display: flex;
+  gap: 80px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #7a7a7a;
 }
 
 .breadcrumb {
-   display: flex;
-   gap: 18px;
-   align-items: center;
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
-
-
-

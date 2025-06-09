@@ -1,5 +1,5 @@
 .table {
-   color: #7A7A7A;
+  color: #7a7a7a;
 }
 
 .table tr {
@@ -8,5 +8,5 @@
 }
 
 .table td:first-child {
-   width: 300px;
+  width: 300px;
 }

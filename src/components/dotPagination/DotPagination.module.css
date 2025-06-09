@@ -1,16 +1,15 @@
 .pagination {
-   display: flex;
-   gap: 16px;
+  display: flex;
+  gap: 16px;
   padding: 8px 0;
   justify-content: center;
 }
-
 
 .dot {
   position: relative;
   width: 10px;
   height: 10px;
-  background-color: #716F6F;
+  background-color: #716f6f;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;

@@ -117,7 +117,8 @@
   flex-shrink: 0;
 }
 
-.previewThumbnail:hover, .previewThumbnail.active {
+.previewThumbnail:hover,
+.previewThumbnail.active {
   opacity: 1;
 }
 

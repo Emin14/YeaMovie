@@ -1,26 +1,17 @@
 import { useEffect, useState } from "react";
 const API_KEY = import.meta.env.VITE_KINOPOISK_API_KEY;
-let cache = {};
 
-export function useFetchSearchMovies(movieTitle) {
-  const [movies, setMovie] = useState([]);
+export function useFetchSimilarMoviesById(id, limit, page) {
+  const [movies, setMovies] = useState([]);
+  const [pageInfo, setPageInfo] = useState({});
   const [error, setError] = useState([]);
   const [loading, setLoading] = useState(false);
-  movieTitle = movieTitle.toLowerCase();
-
   useEffect(() => {
-    if (!movieTitle) {
-      return;
-    }
-    if (cache[movieTitle]) {
-      setMovie(cache[movieTitle]);
-      return;
-    }
     async function fetchData() {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://api.kinopoisk.dev/v1.4/movie/search?page=1&limit=10&query=${movieTitle}`,
+          `https://api.kinopoisk.dev/v1.4/movie?page=${page}&limit=${limit}&notNullFields=name&notNullFields=top250&notNullFields=description&notNullFields=year&notNullFields=countries.name&notNullFields=genres.name&notNullFields=ageRating&notNullFields=rating.kp&notNullFields=poster.url&rating.kp=8-10&similarMovies.id=${id}`,
           {
             method: "GET",
             headers: {
@@ -35,12 +26,8 @@ export function useFetchSearchMovies(movieTitle) {
           throw new Error(data);
         }
         const data = await response.json();
-        setMovie(data.docs);
-        cache[movieTitle] = data.docs;
-        const timeoutId = setTimeout(() => {
-          cache = {};
-          clearTimeout(timeoutId);
-        }, 600000);
+        setMovies(data.docs);
+        setPageInfo({ page: data.page, pages: data.pages });
       } catch (e) {
         setLoading(false);
         setError(e);
@@ -48,7 +35,7 @@ export function useFetchSearchMovies(movieTitle) {
     }
 
     fetchData();
-  }, [movieTitle]);
+  }, [id, limit, page]);
 
-  return { movies, loading, error };
+  return { movies, loading, error, pageInfo };
 }

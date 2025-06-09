@@ -1,5 +1,5 @@
-.movieSearchCards {
-   display: flex;
-   flex-direction: column;
-   gap: 50px;
+.movieCards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }

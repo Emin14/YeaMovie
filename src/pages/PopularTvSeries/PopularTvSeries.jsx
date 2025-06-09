@@ -1,14 +1,15 @@
-import { useFetchPopularMoviesByCategory } from '../PopularMovies/useFetchPopularMoviesByCategory'
-import styles from './PopularTvSeries.module.css'
+import MovieSearchCard from "../../components/MovieSearchCard/MovieSearchCard";
+import { useFetchMoviesByCategory } from "../../hooks/useFetchMoviesByCategory";
+import styles from "./PopularTvSeries.module.css";
 
 export default function PopularTvSeries() {
-  
-  const {movies, error, loading} = useFetchPopularMoviesByCategory('tv-series', 20)
+  const { movies } = useFetchMoviesByCategory("tv-series", 20);
 
   return (
-    <div className={styles.movieSearchCards}>{movies.map(movie => (
-      <MovieSearchCard movie={movie}/>
+    <div className={styles.movieCards}>
+      {movies.map((movie) => (
+        <MovieSearchCard movie={movie} />
       ))}
     </div>
-  )
+  );
 }

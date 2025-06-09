@@ -1,35 +1,33 @@
 .fragments {
-   margin-top: 80px;
+  margin-top: 80px;
 }
 
 .fragmentButton {
-   background-color: #080423;
-   width: 260px;
-   margin: 0 auto;
+  background-color: #080423;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .next {
-   display: flex;
-   align-items: center;
-   justify-content: end;
-   gap: 16px;
-   margin-top: 12px;
-   font-weight: 400;
-   font-size: 16px;  
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-
 .frames {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .frame {
-   width: 430px;
-   height: 420px;
-   border-radius: 10px;
-   object-fit: cover;
+  width: 430px;
+  height: 420px;
+  border-radius: 10px;
+  object-fit: cover;
 }
-

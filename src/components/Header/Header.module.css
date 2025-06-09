@@ -1,37 +1,37 @@
 .header {
-   height: 80px;
-   background-color: #080423;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  height: 80px;
+  background-color: #080423;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-   color: #FF3D81;
-   font-family: Bayon;
-   font-weight: 400;
-   font-size: 40px;
+  color: #ff3d81;
+  font-family: Bayon;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .label {
-   position: relative;
-   margin-left: 144px;
+  position: relative;
+  margin-left: 144px;
 }
 
 .input {
-   width: 400px;
-   height: 40px;
-   border-radius: 60px;
-   padding: 10px 20px;
+  width: 400px;
+  height: 40px;
+  border-radius: 60px;
+  padding: 10px 20px;
 }
 
 .iconWrapper {
-   position: absolute;
-   top: 50%;
-   right: 14px;
-   transform: translateY(-44%);
-   padding: 6px;
-   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-44%);
+  padding: 6px;
+  cursor: pointer;
 }
 
 /* .searchIcon {
