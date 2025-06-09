@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useFetchSimilarMoviesById } from "./useFetchSimilarMoviesById";
 import MoviesList from "../MoviesList/MoviesList";
-import DotPagination from "../DotPagination2/DotPagination";
+import DotPagination from "../DotPagination/DotPagination";
 import styles from "./SimilarMovies.module.css";
 
 export default function SimilarMovies({ id }) {
