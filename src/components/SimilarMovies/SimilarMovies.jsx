@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useFetchSimilarMoviesById } from "./useFetchSimilarMoviesById";
 import MoviesList from "../MoviesList/MoviesList";
-import DotPagination from "../dotPagination/dotPagination";
+import DotPagination from "../DotPagination/DotPagination";
 import styles from "./SimilarMovies.module.css";
+
 
 export default function SimilarMovies({ id }) {
   const [activePage, setActivePage] = useState(1);
