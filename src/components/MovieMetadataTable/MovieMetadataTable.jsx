@@ -13,7 +13,7 @@ export default function MovieMetadataTable({ metadata }) {
         {metadataFiltered.map((item) => {
           const data = Array.isArray(item.data)
             ? item.data.map((item, index, array) => (
-                <span>
+                <span key={item.name}>
                   {item.name}
                   {index < array.length - 1 ? ", " : ""}
                 </span>
@@ -21,7 +21,7 @@ export default function MovieMetadataTable({ metadata }) {
             : item.data;
 
           return (
-            <tr>
+            <tr key={item.ru}>
               <td>{item.ru}:</td>
               <td>{data}</td>
             </tr>

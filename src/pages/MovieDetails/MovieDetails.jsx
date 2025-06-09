@@ -59,7 +59,7 @@ export default function MovieDetails() {
           <p className={styles.watchTitle}>Смотреть на:</p>
           <div className={styles.watchabilityLogos}>
             {movie.watchability.items.map((item) => (
-              <Link to={item.url} target="_blank">
+              <Link key={item.name} to={item.url} target="_blank">
                 <img className={styles.watchabilityLogo} src={item.logo.url} />
               </Link>
             ))}

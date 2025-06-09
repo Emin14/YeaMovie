@@ -5,7 +5,7 @@ export default function Breadcrumbs({ paths, className }) {
   return (
     <div className={`${styles.breadcrumbs} ${className}`}>
       {paths.map((item) => (
-        <Link to={item.path} className={styles.breadcrumb}>
+        <Link key={item.name} to={item.path} className={styles.breadcrumb}>
           <svg
             width="6"
             height="20"

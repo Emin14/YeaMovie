@@ -4,7 +4,6 @@ import MoviesList from "../MoviesList/MoviesList";
 import DotPagination from "../DotPagination/DotPagination";
 import styles from "./SimilarMovies.module.css";
 
-
 export default function SimilarMovies({ id }) {
   const [activePage, setActivePage] = useState(1);
   const { movies, pageInfo } = useFetchSimilarMoviesById(id, 4, activePage);

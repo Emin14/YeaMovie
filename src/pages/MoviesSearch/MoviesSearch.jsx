@@ -21,7 +21,7 @@ export default function MoviesSearch() {
   return (
     <div className={styles.movieCards}>
       {movies.map((movie) => (
-        <MovieSearchCard movie={movie} />
+        <MovieSearchCard key={movie.id} movie={movie} />
       ))}
     </div>
   );

@@ -46,7 +46,12 @@ export default function MovieFrames({ id, className }) {
       </div>
       <div className={`${styles.frames} ${className}`}>
         {images.map((item) => (
-          <img className={styles.frame} src={item.previewUrl} alt="" />
+          <img
+            key={item.previewUrl}
+            className={styles.frame}
+            src={item.previewUrl}
+            alt=""
+          />
         ))}
         {isModalOpen && (
           <ImageSlider images={images} setIsModalOpen={setIsModalOpen} />
