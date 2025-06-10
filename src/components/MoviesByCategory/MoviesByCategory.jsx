@@ -2,12 +2,20 @@ import styles from "./MoviesByCategory.module.css";
 import Filters from "../Filters/Filters";
 import MoviesList from "../MoviesList/MoviesList";
 import { useState } from "react";
-import { useFetchFields } from "../SelectedMovies/useFetchFields";
 import { useFetchMoviesByFilters } from "./useFetchMoviesByFilters";
+import { useFetch } from "../../hooks/useFetch";
 
 export default function MoviesByCategory() {
-  const { data: genres } = useFetchFields("genres.name");
-  const { data: countries } = useFetchFields("countries.name");
+  let { data: genres = [] } = useFetch(
+    "https://api.kinopoisk.dev/v1/movie/possible-values-by-field?field=genres.name",
+    "genres",
+  );
+  genres = genres ?? [];
+  let { data: countries = [] } = useFetch(
+    "https://api.kinopoisk.dev/v1/movie/possible-values-by-field?field=countries.name",
+    "countries",
+  );
+  countries = countries ?? [];
 
   const filtersData = {
     years: Array(46)

@@ -1,6 +1,6 @@
 import styles from "./MovieMetadataTable.module.css";
 
-export default function MovieMetadataTable({ metadata }) {
+export default function MovieMetadataTable({ metadata = [], className }) {
   const metadataFiltered = metadata.filter((item) => item.data);
 
   if (!metadataFiltered.length) {
@@ -8,7 +8,7 @@ export default function MovieMetadataTable({ metadata }) {
   }
 
   return (
-    <table className={styles.table}>
+    <table className={`${styles.table} ${className}`}>
       <tbody>
         {metadataFiltered.map((item) => {
           const data = Array.isArray(item.data)

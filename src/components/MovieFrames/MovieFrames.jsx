@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { useFetchMovieFrames } from "./useFetchMovieFrames";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import Button from "../Button/Button";
 import styles from "./MovieFrames.module.css";
+import { useFetch } from "../../hooks/useFetch";
 
 export default function MovieFrames({ id, className }) {
-  const { images } = useFetchMovieFrames(id);
+  let { data: images = [] } = useFetch(
+    `https://api.kinopoisk.dev/v1.4/image?page=1&limit=6&movieId=${id}`,
+    id,
+  );
+  images = images ?? [];
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {

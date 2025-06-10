@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react";
 import MoviesList from "../MoviesList/MoviesList";
-import { useFetchMoviesByCategory } from "../../hooks/useFetchMoviesByCategory";
-import { useFetchFields } from "./useFetchFields";
 import Spinner from "../Spinner/Spinner";
+import { useFetch } from "../../hooks/useFetch";
+import { addTranslationIntoRussian } from "./utils";
 import styles from "./SelectedMovies.module.css";
 
 export default function SelectedMovies() {
-  const { data: types } = useFetchFields("type");
+  let { data: types = [] } = useFetch(
+    "https://api.kinopoisk.dev/v1/movie/possible-values-by-field?field=type",
+    "type",
+  );
+  types = types ?? [];
   const [activeCategory, setActiveCategory] = useState(null);
 
   useEffect(() => {
     if (!types.length) {
       return;
     }
+    types = addTranslationIntoRussian(types);
     setActiveCategory(types[0].slug);
   }, [types]);
 
-  const { movies, loading } = useFetchMoviesByCategory(activeCategory, 8);
+  let { data: movies = [], loading } = useFetch(
+    `https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&sortField=rating.kp&sortType=-1&notNullFields=name&notNullFields=top250&notNullFields=description&notNullFields=year&notNullFields=countries.name&notNullFields=genres.name&notNullFields=ageRating&notNullFields=rating.kp&notNullFields=poster.url&type=${activeCategory}`,
+    activeCategory,
+  );
+  movies = movies ?? [];
 
   return (
     <div className={styles.selectedMovies}>

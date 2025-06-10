@@ -1,0 +1,17 @@
+.watchTitle {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.watchabilityLogos {
+  display: flex;
+  gap: 20px;
+}
+
+.watchabilityLogo {
+  height: 64px;
+  /* width: 90px; */
+  overflow: hidden;
+}

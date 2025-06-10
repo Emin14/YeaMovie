@@ -3,28 +3,10 @@ import notPoster from "../../../public/notPoster.svg";
 import { Link } from "react-router";
 import MovieMetadataTable from "../MovieMetadataTable/MovieMetadataTable";
 import styles from "./MovieSearchCard.module.css";
+import { getMovieMetadata } from "../../utils/getMovieMetadata";
 
 export default function MovieSearchCard({ movie }) {
-  let metadata = [];
-  if (movie) {
-    metadata = [
-      { data: movie.genres, ru: "Жанр" },
-      { data: movie.countries, ru: "Страна" },
-      { data: movie.year, ru: "Год" },
-      {
-        data: movie.persons?.find((item) => item.enProfession === "director")
-          ?.name,
-        ru: "Режисер",
-      },
-      {
-        data: movie.persons?.filter(
-          (item, index) => item.enProfession === "actor" && index < 5,
-        ),
-        ru: "В главных ролях",
-      },
-    ];
-  }
-
+  const metadata = getMovieMetadata(movie);
   const poster = movie.poster?.previewUrl || notPoster;
 
   return (
@@ -51,7 +33,7 @@ export default function MovieSearchCard({ movie }) {
           </div>
         </div>
         <p className={styles.description}>{movie.description}</p>
-        <MovieMetadataTable metadata={metadata} />
+        <MovieMetadataTable metadata={metadata} className={styles.table} />
         <div className={styles.footer}>
           <Button className={styles.watchBtn}>Смотреть</Button>
           <Button className={styles.favoritesBtn}>В избранное</Button>
